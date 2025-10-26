@@ -1,1 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickTools - 50+ Free Online Tools</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-tools"></i>
+                    <span>QuickTools</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#pdf-tools">PDF Tools</a></li>
+                    <li><a href="#text-tools">Text Tools</a></li>
+                    <li><a href="#image-tools">Image Tools</a></li>
+                    <li><a href="#dev-tools">Developer Tools</a></li>
+                    <li><a href="#calculators">Calculators</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
 
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>50+ Free Online Tools</h1>
+            <p>No Sign Up Required • 100% Free • Instant Results</p>
+            
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="toolSearch" placeholder="Search for any tool...">
+                <button onclick="searchTools()">Search</button>
+            </div>
+
+            <div class="featured-tools">
+                <h3>Most Popular Tools</h3>
+                <div class="tools-grid">
+                    <div class="tool-card" onclick="navigateToTool('pdf-to-word')">
+                        <i class="fas fa-file-word"></i>
+                        <span>PDF to Word</span>
+                    </div>
+                    <div class="tool-card" onclick="navigateToTool('image-compressor')">
+                        <i class="fas fa-compress-alt"></i>
+                        <span>Image Compressor</span>
+                    </div>
+                    <div class="tool-card" onclick="navigateToTool('word-counter')">
+                        <i class="fas fa-font"></i>
+                        <span>Word Counter</span>
+                    </div>
+                    <div class="tool-card" onclick="navigateToTool('qr-generator')">
+                        <i class="fas fa-qrcode"></i>
+                        <span>QR Generator</span>
+                    </div>
+                    <div class="tool-card" onclick="navigateToTool('pdf-compressor')">
+                        <i class="fas fa-file-pdf"></i>
+                        <span>PDF Compressor</span>
+                    </div>
+                    <div class="tool-card" onclick="navigateToTool('password-generator')">
+                        <i class="fas fa-key"></i>
+                        <span>Password Generator</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <main class="container">
+        <!-- PDF Tools -->
+        <section id="pdf-tools" class="category-section">
+            <h2><i class="fas fa-file-pdf"></i> PDF Tools</h2>
+            <div class="category-grid">
+                <div class="tool-card" onclick="navigateToTool('pdf-to-word')">
+                    <i class="fas fa-file-word"></i>
+                    <span>PDF to Word</span>
+                </div>
+                <div class="tool-card" onclick="navigateToTool('word-to-pdf')">
+                    <i class="fas fa-file-pdf"></i>
+                    <span>Word to PDF</span>
+                </div>
+                <div class="tool-card" onclick="navigateToTool('pdf-to-jpg')">
+                    <i class="fas fa-file-image"></i>
+                    <span>PDF to JPG</span>
+                </div>
+                <div class="tool-card" onclick="navigateToTool('jpg-to-pdf')">
+                    <i class="fas fa-file-pdf"></i>
+                    <span>JPG to PDF</span>
+                </div>
+                <div class="tool-card" onclick="navigateToTool('merge-pdf')">
+                    <i class="fas fa-object-group"></i>
+                    <span>Merge PDF</span>
+                </div>
+                <div class="tool-card" onclick="navigateToTool('split-pdf')">
+                    <i class="fas fa-cut"></i>
+                    <span>Split PDF</span>
+                </div>
+                <div class="tool-card" onclick="navigateToTool('compress-pdf')">
+                    <i class="fas fa-compress-alt"></i>
+                    <span>Compress PDF</span>
+                </div>
+                <div class="tool-card" onclick="navigateToTool('pdf-password-remover')">
+                    <i class="fas fa-unlock"></i>
+                    <span>PDF Password Remover</span>
+                </div>
+                <div class="tool-card view-all" onclick="showAllTools('pdf')">
+                    <i class="fas fa-ellipsis-h"></i>
+                    <span>View All (15)</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Text Tools -->
+        <section id="text-tools" class="category-section">
+            <h2><i class="fas fa-font"></i> Text Tools</h2>
+            <div class="category-grid">
+                <div class="tool-card" onclick="navigateToTool('word-counter')">
+                    <i class="fas fa-sort-amount-down"></i>
+                    <span>Word Counter</span>
+                </div>
+                <div class="tool-card" onclick="navigateToTool('grammar-checker')">
+                    <i class="fas fa-spell-check"></i>
+                    <span>Grammar Checker</span>
+                </div>
+                <div class="tool-card" onclick="navigateToTool('plagiarism-checker')">
+                    <i class="fas fa-copy"></i>
+                    <span>Plagiarism Checker</span>
+                </div>
+                <div class="tool-card" onclick="navigateToTool('case-converter')">
+                    <i class="fas fa-text-height"></i>
+                    <span>Case Converter</span>
+                </div>
+                <div class="tool-card" onclick="navigateToTool('lorem-ipsum')">
+                    <i class="fas fa-paragraph"></i>
+                    <span>Lorem Ipsum</span>
+                </div>
+                <div class="tool-card" onclick="navigateToTool('json-formatter')">
+                    <i class="fas fa-code"></i>
+                    <span>JSON Formatter</span>
+                </div>
+                <div class="tool-card view-all" onclick="showAllTools('text')">
+                    <i class="fas fa-ellipsis-h"></i>
+                    <span>View All (10)</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Tools -->
+        <section id="image-tools" class="category-section">
+            <h2><i class="fas fa-image"></i> Image Tools</h2>
+            <div class="category-grid">
+                <div class="tool-card" onclick="navigateToTool('image-compressor')">
+                    <i class="fas fa-compress-alt"></i>
+                    <span>Image Compressor</span>
+                </div>
+                <div class="tool-card" onclick="navigateToTool('image-converter')">
+                    <i class="fas fa-exchange-alt"></i>
+                    <span>Image Converter</span>
+                </div>
+                <div class="tool-card" onclick="navigateToTool('image-resizer')">
+                    <i class="fas fa-expand-alt"></i>
+                    <span>Image Resizer</span>
+                </div>
+                <div class="tool-card" onclick="navigateToTool('background-remover')">
+                    <i class="fas fa-eraser"></i>
+                    <span>Background Remover</span>
+                </div>
+                <div class="tool-card" onclick="navigateToTool('qr-generator')">
+                    <i class="fas fa-qrcode"></i>
+                    <span>QR Generator</span>
+                </div>
+                <div class="tool-card" onclick="navigateToTool('color-picker')">
+                    <i class="fas fa-eye-dropper"></i>
+                    <span>Color Picker</span>
+                </div>
+                <div class="tool-card view-all" onclick="showAllTools('image')">
+                    <i class="fas fa-ellipsis-h"></i>
+                    <span>View All (8)</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Developer Tools -->
+        <section id="dev-tools" class="category-section">
+            <h2><i class="fas fa-code"></i> Developer Tools</h2>
+            <div class="category-grid">
+                <div class="tool-card" onclick="navigateToTool('hash-generator')">
+                    <i class="fas fa-hashtag"></i>
+                    <span>Hash Generator</span>
+                </div>
+                <div class="tool-card" onclick="navigateToTool('password-generator')">
+                    <i class="fas fa-key"></i>
+                    <span>Password Generator</span>
+                </div>
+                <div class="tool-card" onclick="navigateToTool('base64-encoder')">
+                    <i class="fas fa-lock"></i>
+                    <span>Base64 Encoder</span>
+                </div>
+                <div class="tool-card" onclick="navigateToTool('uuid-generator')">
+                    <i class="fas fa-fingerprint"></i>
+                    <span>UUID Generator</span>
+                </div>
+                <div class="tool-card" onclick="navigateToTool('json-validator')">
+                    <i class="fas fa-check-circle"></i>
+                    <span>JSON Validator</span>
+                </div>
+                <div class="tool-card" onclick="navigateToTool('regex-tester')">
+                    <i class="fas fa-terminal"></i>
+                    <span>Regex Tester</span>
+                </div>
+                <div class="tool-card view-all" onclick="showAllTools('dev')">
+                    <i class="fas fa-ellipsis-h"></i>
+                    <span>View All (8)</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calculators -->
+        <section id="calculators" class="category-section">
+            <h2><i class="fas fa-calculator"></i> Calculators</h2>
+            <div class="category-grid">
+                <div class="tool-card" onclick="navigateToTool('age-calculator')">
+                    <i class="fas fa-birthday-cake"></i>
+                    <span>Age Calculator</span>
+                </div>
+                <div class="tool-card" onclick="navigateToTool('unit-converter')">
+                    <i class="fas fa-balance-scale"></i>
+                    <span>Unit Converter</span>
+                </div>
+                <div class="tool-card" onclick="navigateToTool('percentage-calculator')">
+                    <i class="fas fa-percentage"></i>
+                    <span>Percentage Calculator</span>
+                </div>
+                <div class="tool-card" onclick="navigateToTool('loan-calculator')">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <span>Loan Calculator</span>
+                </div>
+                <div class="tool-card" onclick="navigateToTool('bmi-calculator')">
+                    <i class="fas fa-weight"></i>
+                    <span>BMI Calculator</span>
+                </div>
+                <div class="tool-card" onclick="navigateToTool('currency-converter')">
+                    <i class="fas fa-dollar-sign"></i>
+                    <span>Currency Converter</span>
+                </div>
+                <div class="tool-card view-all" onclick="showAllTools('calculators')">
+                    <i class="fas fa-ellipsis-h"></i>
+                    <span>View All (7)</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>QuickTools</h3>
+                    <p>Your all-in-one solution for everyday tools. Free, fast, and no sign-up required.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#pdf-tools">PDF Tools</a></li>
+                        <li><a href="#text-tools">Text Tools</a></li>
+                        <li><a href="#image-tools">Image Tools</a></li>
+                        <li><a href="#dev-tools">Developer Tools</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 QuickTools. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
